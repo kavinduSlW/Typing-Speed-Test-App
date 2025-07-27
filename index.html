@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h1>⌨️ Typing Speed Test</h1>
+      <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </header>
+
+    <div class="test-box">
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      
+      <p id="text-display"></p>
+      <textarea id="text-input" placeholder="Start typing here..." disabled></textarea>
+
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-label">Time</span>
+          <span id="timer" class="stat-value">60</span>s
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">WPM</span>
+          <span id="wpm" class="stat-value">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Best WPM</span>
+          <span id="best-wpm" class="stat-value">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Accuracy</span>
+          <span id="accuracy" class="stat-value">100</span>%
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="time-selector">
+          <label for="time-select">Test Duration:</label>
+          <select id="time-select">
+            <option value="30">30 seconds</option>
+            <option value="60" selected>60 seconds</option>
+            <option value="120">120 seconds</option>
+          </select>
+        </div>
+        <button id="start-btn" class="primary-btn">Start Test</button>
+        <button id="restart-btn" class="secondary-btn" disabled>Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
